@@ -1,4 +1,4 @@
-<h1>RNA-Seq Workflow Analysis for Komagataeibacter Europaeus</h1>
+<h1>Chip-Seq Workflow Analysis for Saccharomyces cerevisiae</h1>
 
 
 
@@ -98,6 +98,10 @@ provided To install HOMER, you can follow the installation instructions on the H
 <p><strong>-<span style="color:#FF5733;">SRR1812770</span></strong> and <strong><span style="color:#FF5733;">SRR1812772</span></strong>:sir3_</p>
 <p><strong>-<span style="color:#FF5733;">SRR1812973</span></strong>:sir4_</p>
   <h3>1. Fastq check using Multiqc:</h3>
+
+  
+[go_enrichment_dotplot.pdf](https://github.com/Naoueldjouher/Chip-seq/files/13261084/go_enrichment_dotplot.pdf)
+
 
 
 
