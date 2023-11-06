@@ -13,9 +13,9 @@
 </p>
 <p>
 <h2>Workflow:</h2>
-<p><strong>Step 1:</strong> Install the necessary software for your RNA-Seq analysis.</p>
-<p><strong>Step 2:</strong> Obtain the FASTA file of the reference genome and the GTF files. Index the reference genome for efficient analysis.</p>
-<p><strong>Step 3:</strong> build reference genome</p>
+<p><strong>Step 1:</strong> Install the necessary software for your Chip-Seq analysis.</p>
+<p><strong>Step 2:</strong> Obtain the FASTA file of the reference genome and the GTF files. </p>
+<p><strong>Step 3:</strong> build reference genome and index the reference genome for efficient analysis.</p>
 <p><strong>Step 4:</strong> Download the SRR files containing your sequencing data. Check the quality of the data using FastQC.</p>
 <p><strong>Step 5:</strong> Trim and preprocess your sequencing data using Trimmomatic for quality control.</p>
 <p><strong>Step 6:</strong> Perform sequence alignment to map the reads to the reference genome.</p>
