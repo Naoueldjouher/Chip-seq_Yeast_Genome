@@ -1,5 +1,5 @@
 <h1>Chip-Seq Workflow Analysis for Saccharomyces cerevisiae</h1>
-
+<p>Sir2, Sir3, and Sir4 are key proteins in yeast known for their roles in gene silencing through the formation of heterochromatin. ChIP-Seq analysis has been employed to investigate their functions by identifying their DNA binding sites. This analysis has revealed specific motifs associated with these proteins, shedding light on their regulatory roles in chromatin structure and gene expression. While Sir2 has diverse functions related to metabolism and gene silencing, Sir3 and Sir4 play central roles in maintaining silent chromatin states at specific loci. Understanding their binding patterns and motifs provides valuable insights into epigenetic regulation in yeast.</p>
 
 
 <p>
@@ -89,7 +89,7 @@ provided To install HOMER, you can follow the installation instructions on the H
 <h3>Setting up the required data for RNA-seq experiment:</h3>
 
 <p> - The vcf file link:<a href="http://ftp.ensembl.org/pub/release-108/variation/vcf/saccharomyces_cerevisiae/saccharomyces_cerevisiae.vcf.gz">Download Link</a> </p>
-<p> - The gtf file link:<a href=" http://ftp.ensembl.org/pub/release-108/gtf/saccharomyces_cerevisiae/Saccharomyces_cerevisiae.R64-1-1.108.gtf.gz">Download Link</a> </p>
+<p> - The gtf file link:<a href="http://ftp.ensembl.org/pub/release-108/gtf/saccharomyces_cerevisiae/Saccharomyces_cerevisiae.R64-1-1.108.gtf.gz">Download Link</a> </p>
 <p>  Chromosomes I to XVI were assembled as one reference genome, the link is provided here: <a href="ftp.ensembl.org/pub/release-108/fasta/saccharomyces_cerevisiae/dna/">Download Link</a> </p>
 <p> The SRR numbers can be downloaded from here: <a href="https://www.ncbi.nlm.nih.gov/Traces/study/?query_key=1&WebEnv=MCID_65481570ff982c6a638a6b67&o=acc_s%3Aa">Download Link</a> </p>
 <p>-There are 12 runs each 3 runs comprised of (wild_type,sir2_,sir3_,sir4_), but for this study 8 runs were selected that consisted of 2 runs for each state. </p>
@@ -100,7 +100,68 @@ provided To install HOMER, you can follow the installation instructions on the H
   <h3>1. Fastq check using Multiqc:</h3>
 
   
-[go_enrichment_dotplot.pdf](https://github.com/Naoueldjouher/Chip-seq/files/13261084/go_enrichment_dotplot.pdf)
+<h3>Fastqc check:</h3>
+<img width="467" alt="Screenshot 2023-11-06 at 19 45 52" src="https://github.com/Naoueldjouher/Chip-seq/assets/80243706/e96b5232-0f97-4de3-9689-32d0b12b8708">
+
+<img width="475" alt="Screenshot 2023-11-06 at 19 45 17" src="https://github.com/Naoueldjouher/Chip-seq/assets/80243706/6ed6c5f6-bc05-49d9-9978-4e1566eb4b6d">
+<img width="464" alt="Screenshot 2023-11-06 at 19 49 03" src="https://github.com/Naoueldjouher/Chip-seq/assets/80243706/7f148e4e-0a33-4121-a9bb-3d6e67305a2e">
+
+<h3>Gene enrichment analysis:</h3>
+<h4><strong>SRR1812767_go_enrichment</strong></h4>
+
+<img width="506" alt="Screenshot 2023-11-06 at 10 54 35" src="https://github.com/Naoueldjouher/Chip-seq/assets/80243706/133ab5e5-391f-4fa9-9d10-28b8945b5d3c">
+<h4><strong>SRR1812770_go_enrichment</strong></h4>
+<img width="504" alt="Screenshot 2023-11-06 at 10 55 25" src="https://github.com/Naoueldjouher/Chip-seq/assets/80243706/35583dfb-bf3f-4ba0-b4c2-6e2ef05c285a">
+<h4><strong>SRR1812772_go_enrichment</strong></h4>
+<img width="510" alt="Screenshot 2023-11-06 at 10 56 08" src="https://github.com/Naoueldjouher/Chip-seq/assets/80243706/85f02ac5-b693-4c72-adc1-0edd0b3cacb1">
+
+<h4><strong>SRR1812973_go_enrichment</strong></h4>
+<img width="506" alt="Screenshot 2023-11-06 at 10 56 29" src="https://github.com/Naoueldjouher/Chip-seq/assets/80243706/c18648ef-7d1f-400b-957f-afaaaa676b5f">
+<p>The enrichment of metabolic and energy-related terms in Sir3's context implies a potential interplay between metabolic processes and its role in gene silencing. Sir4, associated with translation and cytoplasmic translation, may indicate connections between gene regulation and protein synthesis. Sir2's involvement in translation, ribosome biogenesis, and metabolic processes suggests its multifaceted role beyond chromatin silencing. Overall, these findings emphasize the interconnectedness of cellular functions. The roles of these proteins extend beyond their primary functions, with potential links to cellular metabolism, protein synthesis, and broader cellular activities, warranting further investigation.</p>
+
+<h3>Motif Discovery and Analysis with Homer: Identifying Significantly Enriched DNA Motifs:</h3>
+<p>These motifs were  selected based on their low p-values, which are indicative of their statistical significance in our analysis.</p>
+<h4><strong> Main Motif found for sir2_</strong></h4>
+<p>CBF3(AP2EREBP)</p>
+<p>CBF2(AP2EREBP)</p>
+<p>WRKY50(WRKY)</p>
+<p>WRKY28(WRKY)</p>
+<p>WRKY18(WRKY</p>
+<h4><strong> Main Motif found for sir3_</strong></h4>
+<p>DAL80</p>
+<p>MEIS2</p>
+<p>POL008.1_DCE_S_I</p>
+<p>PRDM4</p>
+<p>CEBP(bZIP)</p>
+<p>ASHR1</p>
+<p>WRKY40</p>
+<h4><strong> Main Motif found for sir4_</strong></h4>
+<p>CBF3(AP2EREBP)</p>
+<p>CBF2(AP2EREBP)</p>
+<p>RAP21(AP2EREBP)</p>
+<p>At1g19210(AP2EREBP)</p>
+<p>WRKY20(WRKY)</p>
+<p>At1g75490(AP2EREBP)</p>
+<p>MYB44(MYB)</p>
+
+
+<h4><strong> Conclusion</strong></h4>
+
+<p><strong>Shared AP2EREBP Motifs:</strong></p><p> CBF3(AP2EREBP) and CBF2(AP2EREBP) motifs are shared between Sir2 and Sir4. This could imply that these proteins might be involved in regulating gene expression through AP2EREBP transcription factors, suggesting a potential overlap in their roles.</p>
+
+<p><strong>WRKY Motifs:</p></strong></p><p>Sir2 shares WRKY motifs (WRKY50, WRKY28, WRKY18) with Sir3 and Sir4. This indicates a possible connection between these proteins and the WRKY family of transcription factors in gene regulation. WRKY transcription factors are known to play essential roles in plant signaling, and their presence in this context could point to an interesting regulatory network.</p>
+
+<p><strong>Unique Motifs:</p></strong></p><p> Sir3 and Sir4 have unique motifs (e.g., DAL80, MEIS2, PRDM4) that are not shared with Sir2. These unique motifs suggest that Sir3 and Sir4 may have distinct roles or interactions with specific transcription factor families.</p>
+
+<p>In summary, the shared motifs among Sir2, Sir3, and Sir4 suggest potential interactions and collaborations with specific transcription factor families (AP2EREBP and WRKY). This could indicate their roles in diverse gene regulatory processes and highlight the complexity of their functions in yeast cells.</p>
+
+
+
+
+
+
+
+
 
 
 
